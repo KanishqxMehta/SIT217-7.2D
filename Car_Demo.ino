@@ -19,6 +19,7 @@ void setup() {
 
 void Stop()
 {
+  Serial.println("S");
   digitalWrite(4,LOW);
   digitalWrite(5,LOW);
   digitalWrite(6,LOW);
@@ -27,6 +28,7 @@ void Stop()
 
 void Forward()
 {
+  Serial.println("F");
   digitalWrite(4,LOW);
   digitalWrite(5,HIGH);
   digitalWrite(6,HIGH);
@@ -34,6 +36,7 @@ void Forward()
 }
 void Backward()
 {
+  Serial.println("B");
   digitalWrite(4,HIGH);
   digitalWrite(5,LOW);
   digitalWrite(6,LOW);
@@ -41,6 +44,7 @@ void Backward()
 
 }
 void left() {
+  Serial.println("L");
   digitalWrite(4,HIGH);
   digitalWrite(5,LOW);
   digitalWrite(6,HIGH);
@@ -48,6 +52,7 @@ void left() {
 
 }
 void right() {
+  Serial.println("R");
   digitalWrite(4,LOW);
   digitalWrite(5,HIGH);
   digitalWrite(6,LOW);
@@ -80,12 +85,12 @@ void loop()
   // else
   // {
   Forward();
-  delay(300);
+  delay(1000);
   // }
   Backward();
-  delay(300);
+  delay(1000);
   left();
-  delay(300);
+  delay(1000);
   right();
-  delay(300);
+  delay(1000);
 }
